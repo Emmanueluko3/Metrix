@@ -7,6 +7,7 @@ const Card = (props) => {
   const options = ["This Week", "Last Week", "1 Month"];
   const {
     logo,
+    date,
     logoBg,
     titleOne,
     descOne,
@@ -15,6 +16,9 @@ const Card = (props) => {
     percentageOne,
     percentageTwo,
     cardBg,
+    titleColor,
+    descColor,
+    percentageColor,
   } = props;
   return (
     <div
@@ -29,31 +33,31 @@ const Card = (props) => {
           <img src={logo} alt="ico" />
         </div>
 
-        <CustomDropdown options={options} />
+        {date === true ? <CustomDropdown options={options} /> : null}
       </div>
       <div className="flex items-start">
         <div className="w-half">
-          <p style={{ color: "#BEC0CA", fontSize: "14px" }}>{titleOne}</p>
+          <p style={{ color: titleColor, fontSize: "14px" }}>{titleOne}</p>
           <h3
-            style={{ color: "#45464E", fontSize: "20px", whiteSpace: "nowrap" }}
+            style={{ color: descColor, fontSize: "20px", whiteSpace: "nowrap" }}
           >
             {descOne}{" "}
             {percentageOne && (
-              <span style={{ color: "#519C66", fontSize: "12px" }}>
+              <span style={{ color: percentageColor, fontSize: "12px" }}>
                 {percentageOne}
               </span>
             )}
           </h3>
         </div>
         <div className="w-half">
-          <p style={{ color: "#BEC0CA", fontSize: "14px" }}>{titleTwo}</p>
+          <p style={{ color: titleColor, fontSize: "14px" }}>{titleTwo}</p>
 
           <h3
-            style={{ color: "#45464E", fontSize: "20px", whiteSpace: "nowrap" }}
+            style={{ color: descColor, fontSize: "20px", whiteSpace: "nowrap" }}
           >
             {descTwo}{" "}
             {percentageTwo && (
-              <span style={{ color: "#519C66", fontSize: "12px" }}>
+              <span style={{ color: percentageColor, fontSize: "12px" }}>
                 {percentageTwo}
               </span>
             )}
