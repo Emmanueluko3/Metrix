@@ -1,0 +1,19 @@
+.card-view {
+  border-radius: 12px;
+  width: 321px;
+  height: 145px;
+  padding: 11px 15px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+
+  background: rgba(85, 112, 241, 0.12);
+}
+
+.card-view .logo-icon img {
+  width: 20px;
+  height: 20px;
+}
