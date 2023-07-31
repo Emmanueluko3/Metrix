@@ -25,6 +25,10 @@ code {
   flex-direction: row;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .flex-col {
   flex-direction: column;
 }

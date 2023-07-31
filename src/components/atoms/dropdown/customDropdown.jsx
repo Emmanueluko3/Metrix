@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./customDropdown.css"; // Import the CSS file for styling
 
-const CustomDropdown = () => {
-  const options = ["This Week", "Last Week", "1 Month"];
+const CustomDropdown = ({ options }) => {
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
   const [isOpen, setIsOpen] = useState(false);

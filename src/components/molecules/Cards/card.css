@@ -5,15 +5,40 @@
   padding: 11px 15px;
 }
 
+.card-view-pie {
+  border-radius: 12px;
+  width: 321px;
+  /* height: 145px; */
+  padding: 11px 15px;
+}
+
 .logo-icon {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-
-  background: rgba(85, 112, 241, 0.12);
 }
 
 .card-view .logo-icon img {
   width: 20px;
   height: 20px;
+}
+
+/* piechart */
+.card-view-pie .piechart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #eef0fa;
+  border-radius: 100%;
+  padding: 18px;
+  margin-bottom: 30px;
+}
+
+.card-view-pie .center-circle {
+  top: calc(50% - 55px); /* Half the height of the center circle */
+  left: calc(50% - 55px); /* Half the width of the center circle */
+}
+
+.w-full {
+  width: 100%;
 }

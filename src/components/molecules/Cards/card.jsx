@@ -3,27 +3,60 @@ import logo from "../../atoms/icons/Bag.svg";
 import "./card.css";
 import CustomDropdown from "../../atoms/dropdown/customDropdown";
 
-const Card = () => {
+const Card = (props) => {
+  const options = ["This Week", "Last Week", "1 Month"];
+  const {
+    logo,
+    logoBg,
+    titleOne,
+    descOne,
+    titleTwo,
+    descTwo,
+    percentageOne,
+    percentageTwo,
+    cardBg,
+  } = props;
   return (
-    <div className="cus-bg-white card-view flex justify-between flex-col">
+    <div
+      style={{ background: cardBg }}
+      className="card-view flex justify-between flex-col"
+    >
       <div className="flex items-center justify-between">
-        <div className="logo-icon flex justify-center items-center">
+        <div
+          className="logo-icon flex justify-center items-center"
+          style={{ background: logoBg }}
+        >
           <img src={logo} alt="ico" />
         </div>
 
-        <CustomDropdown />
+        <CustomDropdown options={options} />
       </div>
       <div className="flex items-start">
         <div className="w-half">
-          <p style={{ color: "#BEC0CA", fontSize: "14px" }}>Sales</p>
-          <h3 style={{ color: "#45464E", fontSize: "20px" }}>₦4,000,000.00</h3>
+          <p style={{ color: "#BEC0CA", fontSize: "14px" }}>{titleOne}</p>
+          <h3
+            style={{ color: "#45464E", fontSize: "20px", whiteSpace: "nowrap" }}
+          >
+            {descOne}{" "}
+            {percentageOne && (
+              <span style={{ color: "#519C66", fontSize: "12px" }}>
+                {percentageOne}
+              </span>
+            )}
+          </h3>
         </div>
         <div className="w-half">
-          <p style={{ color: "#BEC0CA", fontSize: "14px" }}>Volume</p>
+          <p style={{ color: "#BEC0CA", fontSize: "14px" }}>{titleTwo}</p>
 
-          <h3 style={{ color: "#45464E", fontSize: "20px" }}>
-            450{" "}
-            <span style={{ color: "#519C66", fontSize: "12px" }}>+20.00%</span>
+          <h3
+            style={{ color: "#45464E", fontSize: "20px", whiteSpace: "nowrap" }}
+          >
+            {descTwo}{" "}
+            {percentageTwo && (
+              <span style={{ color: "#519C66", fontSize: "12px" }}>
+                {percentageTwo}
+              </span>
+            )}
           </h3>
         </div>
       </div>
