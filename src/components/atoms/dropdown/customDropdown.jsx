@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./customDropdown.css";
 
-const CustomDropdown = ({ options }) => {
+const CustomDropdown = ({ options, bgColor, textColor }) => {
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,14 @@ const CustomDropdown = ({ options }) => {
 
   return (
     <div className="custom-dropdown">
-      <button className="dropdown-toggle" onClick={toggleDropdown}>
+      <button
+        style={{
+          background: bgColor,
+          color: textColor ? textColor : "#bec0ca",
+        }}
+        className="dropdown-toggle"
+        onClick={toggleDropdown}
+      >
         {selectedOption}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +42,11 @@ const CustomDropdown = ({ options }) => {
       {isOpen && (
         <ul className="dropdown-menu">
           {options.map((option) => (
-            <li key={option} onClick={() => handleOptionSelect(option)}>
+            <li
+              key={option}
+              onClick={() => handleOptionSelect(option)}
+              style={{ color: textColor ? textColor : "#bec0ca" }}
+            >
               {option}
             </li>
           ))}

@@ -6,13 +6,11 @@
 .dropdown-toggle {
   display: flex;
   align-items: center;
-  background-color: transparent;
-  color: #bec0ca;
+
   display: flex;
-  /* white-space: nowrap; */
-  width: 150px;
+  border-radius: 8px;
   border: none;
-  padding: 10px;
+  padding: 6px;
   font-weight: 400;
   font-size: 12px;
   text-align: left;
@@ -20,7 +18,7 @@
 }
 
 .dropdown-icon {
-  font-size: 12px;
+  height: 20px;
 }
 
 .dropdown-menu {
@@ -34,7 +32,6 @@
   padding: 0;
   margin: 0;
 
-  color: #bec0ca;
   display: block;
 }
 

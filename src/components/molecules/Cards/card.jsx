@@ -33,7 +33,9 @@ const Card = (props) => {
           <img src={logo} alt="ico" />
         </div>
 
-        {date === true ? <CustomDropdown options={options} /> : null}
+        {date === true ? (
+          <CustomDropdown bgColor="transparent" options={options} />
+        ) : null}
       </div>
       <div className="flex items-start">
         <div className="w-half">
