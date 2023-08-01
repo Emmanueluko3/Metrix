@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./sidebar.css";
+import { useLocation } from "react-router-dom";
 import Logo from "../../../assets/images/Logo.png";
 import CategoryActive from "../../atoms/icons/CategoryActive.svg";
 import Category from "../../atoms/icons/Category.svg";
@@ -13,8 +14,25 @@ import Gift from "../../atoms/icons/gift.svg";
 import Logout from "../../atoms/icons/Logout.svg";
 
 const Sidebar = () => {
+  const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const activeIndex = links.findIndex(
+      (item) => item.href === location.pathname
+    );
+    setActive(activeIndex);
+  }, [location]);
+
+  const handleItemClick = (index) => {
+    if (index === 6) {
+      localStorage.clear();
+      window.location.reload();
+    }
+    setActive(index);
+    localStorage.setItem("activeIndex", index.toString());
+  };
 
   const handleToggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -79,7 +97,7 @@ const Sidebar = () => {
           <li key={index}>
             <a
               onClick={() => {
-                setActive(index);
+                handleItemClick(index);
               }}
               href={item.href}
               className={active == index ? "active" : null}

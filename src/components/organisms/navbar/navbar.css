@@ -1,0 +1,31 @@
+nav {
+  background: #fff;
+  padding: 12px 18px;
+}
+
+.profilepic {
+  width: 32px;
+  height: 32px;
+}
+
+nav .drop {
+  width: 120px;
+}
+
+.notificationicon {
+  padding: 0 18px;
+}
+
+.navicon {
+  border-top: 1px solid var(--stroke, #f1f3f9);
+  background: #fff;
+  padding: 10px 18px;
+}
+
+.navicon img {
+  margin-right: 18px;
+}
+
+.navicon p {
+  color: #8b8d97;
+}

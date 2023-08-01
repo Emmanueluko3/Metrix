@@ -13,22 +13,6 @@ function DashboardAnalysis() {
   return (
     <div className="flex justify-between">
       <div className="flex flex-wrap justify-between dash-layout">
-        {/* <div className="sectionOne">
-        <Card
-          logo={Bag}
-          logoBg="rgba(85, 112, 241, 0.12)"
-          date={true}
-          titleOne="Sales"
-          descOne="₦4,000,000.00"
-          titleTwo="Volume"
-          descTwo={450}
-          percentageTwo="+20.00"
-          cardBg="#fff"
-          descColor="#45464E"
-          titleColor="#BEC0CA"
-          percentageColor="#519C66"
-        />
-      </div> */}
         <div className="sectionOne">
           <Card
             logo={Graph}
