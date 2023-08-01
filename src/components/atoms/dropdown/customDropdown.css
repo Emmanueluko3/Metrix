@@ -1,15 +1,16 @@
-/* CustomDropdown.css */
 .custom-dropdown {
   position: relative;
   display: inline-block;
 }
 
 .dropdown-toggle {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   color: #bec0ca;
   display: flex;
   /* white-space: nowrap; */
-
+  width: 150px;
   border: none;
   padding: 10px;
   font-weight: 400;

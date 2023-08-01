@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./customDropdown.css"; // Import the CSS file for styling
+import "./customDropdown.css";
 
 const CustomDropdown = ({ options }) => {
   const [selectedOption, setSelectedOption] = useState(options[0]);

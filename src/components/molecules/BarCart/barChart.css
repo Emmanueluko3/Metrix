@@ -1,24 +1,36 @@
-.bar-chart {
+.summary {
   display: flex;
+  flex-direction: column;
   border-radius: 12px;
   width: 600px;
-  height: 300px;
   background: #fff;
   padding: 20px;
+  color: #bec0ca;
+}
+.bar-chart {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.bar-chart .prices {
+  font-size: 11px;
+  font-weight: 400;
 }
 
 .bar {
-  flex: 1;
-  margin: 0 5px;
-  background-color: #8884d8;
-  border: 1px solid #777;
-  text-align: center;
+  height: 90%;
+  margin: 0 10px;
+  background-color: #eef0fa;
+  border-radius: 100px;
   position: relative;
 }
 
 .bar-label {
-  margin-bottom: 5px;
-  font-size: 14px;
+  margin-top: 18px;
+  font-size: 11px;
+  font-weight: 400;
 }
 
 .bar-fill {
@@ -26,6 +38,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #8884d8;
+  border-radius: 100px;
+  background-color: #5570f1;
   transition: height 0.3s ease-in-out;
 }
