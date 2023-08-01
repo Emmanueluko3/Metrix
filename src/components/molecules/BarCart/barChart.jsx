@@ -21,14 +21,18 @@ const BarChartComponent = () => {
     <div className="summary">
       <div className="flex justify-between">
         <div className="flex w-half items-center">
-          <h3>Summary</h3>
+          <h3 style={{ marginRight: "18px" }}>Summary</h3>
           <CustomDropdown
             bgColor="rgba(85, 112, 241, 0.08)"
-            textColor=""
+            textColor="#5570F1"
             options={sales}
           />
         </div>
-        <CustomDropdown bgColor="transparent" options={sumDate} />
+        <CustomDropdown
+          textColor="#1C1D22"
+          bgColor="transparent"
+          options={sumDate}
+        />
       </div>
       <div className="bar-chart">
         <div>
