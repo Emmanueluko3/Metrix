@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Porofilepic from "../../atoms/icons/profilepic.png";
+import Bag from "../../atoms/icons/Bag.svg";
 import "./index.css";
 import SearchBar from "../../atoms/seachbar";
 
@@ -51,8 +52,8 @@ const UserList = () => {
         />
         <div className="user-info">
           <h3 className="user-name">{user.name}</h3>
-          <p className="user-message">{`${user.message.substring(0, 40)}${
-            user.message.length >= 40 ? "..." : ""
+          <p className="user-message">{`${user.message.substring(0, 35)}${
+            user.message.length >= 35 ? "..." : ""
           }`}</p>
         </div>
         <div className="time-stamp">
@@ -73,6 +74,27 @@ const UserList = () => {
 
     return selectedUser.chats.map((chat) => (
       <div key={chat.id} className="chat">
+        <div className="chat-head">
+          <img className="profilepics" src={Porofilepic} alt="Jane Doe" />
+          <div className="user-status">
+            <h4>Jane Doe</h4>
+            <p style={{ color: "#B6BFE8" }}>
+              <span className="bpoint"></span>Online{" "}
+              <span style={{ color: "#8B8D97" }}>12:55 am</span>
+            </p>
+          </div>
+          <div className="user-status-right">
+            <div className="flex">
+              <div className="bannerOne">New Customer</div>
+              <a href="/profile" style={{ color: "#5570F1" }}>
+                View Profile
+              </a>
+            </div>
+            <p className="flex items-center" style={{ color: "#8B8D97" }}>
+              <img src={Bag} className="h-4 w-4" alt="" /> 0 Orders
+            </p>
+          </div>
+        </div>
         <p className="chat-from">{chat.from}</p>
         <p className="chat-message">{chat.message}</p>
         <p className="chat-date">{chat.date}</p>
@@ -92,10 +114,7 @@ const UserList = () => {
         </div>
         {renderUsers()}
       </div>
-      <div className="chats-container">
-        <h2>Chats</h2>
-        {renderChats()}
-      </div>
+      <div className="chats-container">{renderChats()}</div>
     </div>
   );
 };

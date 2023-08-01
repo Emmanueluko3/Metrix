@@ -5,13 +5,12 @@ import Sidebar from "../organisms/sidebar/sidebar";
 import DashboardAnalysis from "../organisms/dasboadAnalytics";
 import Navbar from "../organisms/navbar/navbar";
 import Error from "../pages/error";
-import Chat from "../molecules/chat/chat";
 import Conversations from "../organisms/conversations";
 
 const Layout = () => {
   return (
     <Router>
-      <div className="flex">
+      <div className="flex w-full">
         <Sidebar />
         <div>
           <Navbar />

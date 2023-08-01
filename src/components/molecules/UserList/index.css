@@ -1,13 +1,12 @@
 .user-list-container {
-  width: 400px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .users-container {
+  width: 40%;
   background: #fff;
   padding: 22px 0;
-  width: 100%;
   border-radius: 8px;
 }
 
@@ -84,19 +83,72 @@
   color: #888;
 }
 
+.chats-container {
+  width: 58%;
+}
+
 .chat {
-  background-color: #f0f0f0;
-  padding: 10px;
-
-  border-radius: 4px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
-.chat-from {
-  font-size: 14px;
-  font-weight: bold;
+.chat-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 22px;
+  border-bottom: 1px solid #f1f3f9;
 }
 
-.chat-message,
-.chat-date {
-  font-size: 14px;
+.chat-head .profilepics {
+  height: 60px;
+  width: 60px;
+  margin-right: 14px;
+}
+
+.user-status {
+  margin-right: auto;
+}
+
+.user-status-right {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+}
+
+.user-status-right a {
+  font-size: 13px;
+  padding: 0 0 12px 0 !important;
+}
+
+.user-status-right p {
+  font-size: 13px;
+  margin: 4px 0 0 0;
+}
+
+.user-status h4 {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  color: #45464e;
+}
+
+.user-status p {
+  font-size: 13px;
+}
+
+.bpoint {
+  width: 12px;
+  height: 12px;
+  background: #5570f1;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.bannerOne {
+  padding: 3px 6px;
+  font-size: 13px;
+  border-radius: 8px;
+  background: #fef5ea;
+  margin-right: 8px;
 }
