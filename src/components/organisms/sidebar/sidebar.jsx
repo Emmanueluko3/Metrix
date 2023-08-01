@@ -1,5 +1,3 @@
-// src/components/organisms/Sidebar.js
-
 import React, { useState } from "react";
 import "./sidebar.css";
 import Logo from "../../../assets/images/Logo.png";
@@ -8,6 +6,11 @@ import Category from "../../atoms/icons/Category.svg";
 import Bag from "../../atoms/icons/Bag.svg";
 import User from "../../atoms/icons/User.svg";
 import Folder from "../../atoms/icons/Folder.svg";
+import Chat from "../../atoms/icons/Chat.svg";
+import Settings from "../../atoms/icons/Setting.svg";
+import Headphone from "../../atoms/icons/headphones.svg";
+import Gift from "../../atoms/icons/gift.svg";
+import Logout from "../../atoms/icons/Logout.svg";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -49,14 +52,14 @@ const Sidebar = () => {
     {
       href: "/conversations",
       label: "Conversations",
-      icon: Bag,
+      icon: Chat,
       activeIcon: null,
       pushNote: 16,
     },
     {
       href: "/settings",
       label: "Settings",
-      icon: Bag,
+      icon: Settings,
       activeIcon: null,
       pushNote: null,
     },
@@ -88,9 +91,33 @@ const Sidebar = () => {
         ))}
       </ul>
       <div className="bottom-links">
-        <a href="" className="contact-support">
+        <a href="" className="contact-support flex items-center">
+          <img
+            src={Headphone}
+            className="h-6 w-6"
+            style={{ marginRight: "12px" }}
+            alt="icon"
+          />{" "}
           Contact Support
         </a>
+        <div className="gift">
+          <div className="flex items-center">
+            <img
+              src={Gift}
+              className="h-6 w-6"
+              style={{ marginRight: "12px" }}
+              alt="icon"
+            />{" "}
+            <p style={{ color: "#1C1D22" }}>Free Gift Await You!</p>
+          </div>
+          <p style={{ color: "#6E7079", fontSize: "12px" }}>
+            upgrade your Account
+          </p>
+        </div>
+        <button className="logout">
+          <img src={Logout} className="h-6 w-6" alt="" />
+          Logout
+        </button>
       </div>
     </div>
   );

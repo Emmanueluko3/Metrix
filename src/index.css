@@ -64,3 +64,11 @@ code {
 .w-half {
   width: 50%;
 }
+
+.w-6 {
+  width: 24px;
+}
+
+.h-6 {
+  height: 24px;
+}
