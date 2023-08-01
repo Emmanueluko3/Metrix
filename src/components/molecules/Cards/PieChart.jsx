@@ -17,7 +17,7 @@ const PieChartComp = () => {
       <div className="flex items-center justify-between w-full">
         <h3>Marketting</h3>
 
-        <CustomDropdown options={date} />
+        <CustomDropdown bgColor="#fff" options={date} />
       </div>
       <div
         className="flex justify-between w-full"

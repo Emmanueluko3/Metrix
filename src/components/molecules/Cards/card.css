@@ -1,14 +1,12 @@
 .card-view {
   border-radius: 12px;
-  width: 321px;
   height: 145px;
   padding: 11px 15px;
 }
 
 .card-view-pie {
   border-radius: 12px;
-  width: 321px;
-  /* height: 145px; */
+
   padding: 11px 15px;
 }
 
