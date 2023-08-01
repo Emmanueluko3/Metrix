@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./chat.css";
 
-function App() {
+function Chat() {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
@@ -37,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export default Chat;

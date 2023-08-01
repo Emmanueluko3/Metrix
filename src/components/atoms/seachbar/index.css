@@ -1,0 +1,23 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  color: #cfd3d4;
+  border: 1px solid #cfd3d4;
+  border-radius: 8px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  fill: #aaa;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+}

@@ -1,0 +1,17 @@
+.cus-button {
+  display: flex;
+  width: 161px;
+  height: 36px;
+  padding: 17px 16px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #5570f1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cus-button:hover {
+  background: #3f5ae3;
+}

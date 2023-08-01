@@ -1,0 +1,102 @@
+.user-list-container {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.users-container {
+  background: #fff;
+  padding: 22px 0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.users-container .header {
+  padding: 0 22px;
+}
+
+.cus-mb {
+  margin-bottom: 20px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px 22px;
+  border-bottom: 1px solid #f1f3f9;
+}
+
+.user:hover {
+  background: #f7f7fc;
+  border-right: 3px solid #5570f1;
+}
+
+.active-chat {
+  background: #f7f7fc;
+  border-right: 3px solid #5570f1;
+}
+
+.user-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.user-name {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+  color: #45464e;
+}
+
+.user-message,
+.user-date {
+  margin: 0;
+  font-size: 13px;
+  color: #8b8d97;
+  white-space: nowrap;
+}
+
+.time-stamp {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-stamp span {
+  padding: 3px 6px;
+  background: #fef5ea;
+  border-radius: 8px;
+  margin: 0 0 8px 0;
+}
+
+.no-user-selected {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+.chat {
+  background-color: #f0f0f0;
+  padding: 10px;
+
+  border-radius: 4px;
+}
+
+.chat-from {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.chat-message,
+.chat-date {
+  font-size: 14px;
+}
