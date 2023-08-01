@@ -1,0 +1,27 @@
+.orders {
+  border-radius: 12px;
+  width: 423px;
+
+  padding: 20px;
+  background: #fff;
+}
+
+.orders .title {
+  color: #45464e;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.orders .product {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #f1f3f9;
+}
+
+.orders .order-icon {
+  padding: 6px;
+  margin-right: 14px;
+  width: 49px;
+  height: 49px;
+}

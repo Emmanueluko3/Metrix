@@ -4,6 +4,7 @@ import Logo from "../../atoms/icons/Bag.svg";
 import User from "../../atoms/icons/User.svg";
 import PieChartComp from "../../molecules/Cards/PieChart";
 import BarChartComponent from "../../molecules/BarCart/barChart";
+import Orders from "../../molecules/Oders/Orders";
 
 function DashboardAnalysis() {
   return (
@@ -52,8 +53,24 @@ function DashboardAnalysis() {
         descColor="#fff"
         percentageColor="#fff"
       />
+      <Card
+        logo={User}
+        logoBg="rgba(255, 204, 145, 0.16)"
+        date={true}
+        titleOne="Abandoned Cart"
+        descOne="20%"
+        percentageOne="+0.00%"
+        titleTwo="Customers"
+        descTwo="30"
+        cardBg="#fff"
+        titleColor="#519C66"
+        descColor="#45464E"
+        percentageColor="#519C66"
+      />
 
       <BarChartComponent />
+
+      <Orders />
     </div>
   );
 }
