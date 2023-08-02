@@ -23,7 +23,7 @@ const Card = (props) => {
   return (
     <div
       style={{ background: cardBg }}
-      className="card-view flex justify-between flex-col"
+      className="card-view flex justify-between flex-col card-hover"
     >
       <div className="flex items-center justify-between">
         <div

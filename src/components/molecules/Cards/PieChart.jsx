@@ -13,7 +13,7 @@ const PieChartComp = () => {
   const date = ["This Week", "Last Week", "1 Month"];
 
   return (
-    <div className="cus-bg-white card-view-pie flex justify-between items-center flex-col">
+    <div className="cus-bg-white card-view-pie card-hover flex justify-between items-center flex-col">
       <div className="flex items-center justify-between w-full">
         <h3>Marketting</h3>
 
@@ -21,7 +21,7 @@ const PieChartComp = () => {
       </div>
       <div
         className="flex justify-between w-full"
-        style={{ marginBottom: "20px" }}
+        style={{ marginBottom: "4px" }}
       >
         <p>
           <span

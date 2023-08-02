@@ -18,6 +18,34 @@ const orders = [
     date: "12 Sept 2022",
     productStatus: "Completed",
   },
+  {
+    icon: IphoneTwo,
+    title: "iPhone 13",
+    price: "730,000.00 x 1",
+    date: "12 Sept 2022",
+    productStatus: "Completed",
+  },
+  {
+    icon: Iphone,
+    title: "iPhone 13",
+    price: "730,000.00 x 1",
+    date: "12 Sept 2022",
+    productStatus: "Pending",
+  },
+  {
+    icon: IphoneTwo,
+    title: "iPhone 13",
+    price: "730,000.00 x 1",
+    date: "12 Sept 2022",
+    productStatus: "Completed",
+  },
+  {
+    icon: Iphone,
+    title: "iPhone 13",
+    price: "730,000.00 x 1",
+    date: "12 Sept 2022",
+    productStatus: "Pending",
+  },
 ];
 
 function Orders() {

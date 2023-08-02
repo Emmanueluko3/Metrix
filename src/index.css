@@ -74,10 +74,48 @@ code {
   height: 24px;
 }
 
-.w-6 {
+.w-4 {
   width: 16px;
 }
 
-.h-6 {
+.h-4 {
   height: 16px;
+}
+
+.h-60 {
+  height: 60vh;
+}
+
+.h-70 {
+  height: 70vh;
+}
+
+.h-80 {
+  height: 80vh;
+}
+
+.cus-px {
+  padding: 22px;
+}
+
+.overflow-y {
+  overflow-y: auto;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card-hover {
+  transition: transform 2s;
+  cursor: pointer;
+}
+
+.card-hover:hover {
+  transform: scale(1.1);
 }

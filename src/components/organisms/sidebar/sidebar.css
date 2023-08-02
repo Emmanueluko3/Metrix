@@ -47,6 +47,15 @@ a {
   width: 100%;
 }
 
+.nav-links li:hover,
+.nav-links li a:hover {
+  background: #5570f1;
+  /* margin-bottom: 8px; */
+  background: #5570f1;
+  color: #fff !important;
+  border-radius: 12px;
+}
+
 .active {
   padding: 14px 20px;
   /* margin-bottom: 8px; */
@@ -95,6 +104,11 @@ a {
   border-radius: 16px;
   background: rgba(94, 99, 102, 0.1);
   margin-bottom: 14px;
+  cursor: pointer;
+}
+
+.contact-support:hover {
+  background: rgba(94, 99, 102, 0.476);
 }
 
 .gift {
@@ -103,6 +117,11 @@ a {
   font-size: 14px;
   border-radius: 16px;
   margin-bottom: 34px;
+  cursor: pointer;
+}
+
+.gift:hover {
+  background: #f7bf7f;
 }
 
 .logout {

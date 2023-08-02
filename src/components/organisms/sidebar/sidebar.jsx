@@ -8,6 +8,7 @@ import Bag from "../../atoms/icons/Bag.svg";
 import User from "../../atoms/icons/User.svg";
 import Folder from "../../atoms/icons/Folder.svg";
 import Chat from "../../atoms/icons/Chat.svg";
+import ChatActive from "../../atoms/icons/ChatActive.svg";
 import Settings from "../../atoms/icons/Setting.svg";
 import Headphone from "../../atoms/icons/headphones.svg";
 import Gift from "../../atoms/icons/gift.svg";
@@ -42,8 +43,8 @@ const Sidebar = () => {
     {
       href: "/",
       label: "Dashboard",
-      icon: CategoryActive,
-      activeIcon: Category,
+      icon: Category,
+      activeIcon: CategoryActive,
       pushNote: null,
     },
     {
@@ -71,7 +72,8 @@ const Sidebar = () => {
       href: "/conversations",
       label: "Conversations",
       icon: Chat,
-      activeIcon: null,
+
+      activeIcon: ChatActive,
       pushNote: 16,
     },
     {
@@ -100,9 +102,18 @@ const Sidebar = () => {
                 handleItemClick(index);
               }}
               href={item.href}
-              className={active == index ? "active" : null}
+              className={active === index ? "active" : null}
             >
-              <img src={item.icon} alt="icon" />
+              <img
+                src={
+                  active === index
+                    ? item.activeIcon
+                      ? item.activeIcon
+                      : item.icon
+                    : item.icon
+                }
+                alt="icon"
+              />
               {item.label} {item.pushNote ? <span>{item.pushNote}</span> : null}
             </a>
           </li>
@@ -132,7 +143,7 @@ const Sidebar = () => {
             upgrade your Account
           </p>
         </div>
-        <button className="logout">
+        <button className="logout" style={{ cursor: "pointer" }}>
           <img src={Logout} className="h-6 w-6" alt="" />
           Logout
         </button>

@@ -6,7 +6,6 @@
 
 .card-view-pie {
   border-radius: 12px;
-
   padding: 11px 15px;
 }
 
@@ -24,12 +23,12 @@
 /* piechart */
 .card-view-pie .piechart {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-color: #eef0fa;
   border-radius: 100%;
   padding: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
 }
 
 .card-view-pie .center-circle {
