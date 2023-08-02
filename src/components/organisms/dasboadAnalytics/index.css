@@ -18,3 +18,49 @@
 .viewTop {
   margin-bottom: 20px;
 }
+
+@media (600px <= width <= 900px) {
+  .dash-layout {
+    width: 100%;
+  }
+  .sectionOne {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sectionTwo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .orders-view {
+    width: 100%;
+  }
+
+  .viewTop {
+    margin-bottom: 20px;
+  }
+}
+
+@media (width <= 600px) {
+  .dash-layout {
+    width: 100%;
+  }
+  .sectionOne {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sectionTwo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .orders-view {
+    width: 100%;
+  }
+
+  .viewTop {
+    margin-bottom: 20px;
+  }
+}

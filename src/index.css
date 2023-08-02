@@ -119,3 +119,9 @@ code {
 .card-hover:hover {
   transform: scale(1.1);
 }
+
+.icon-blue {
+  color: #5570f1;
+  font-weight: 700;
+  font-size: 24px;
+}

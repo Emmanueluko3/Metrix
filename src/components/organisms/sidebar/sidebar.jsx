@@ -13,6 +13,8 @@ import Settings from "../../atoms/icons/Setting.svg";
 import Headphone from "../../atoms/icons/headphones.svg";
 import Gift from "../../atoms/icons/gift.svg";
 import Logout from "../../atoms/icons/Logout.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -91,9 +93,15 @@ const Sidebar = () => {
         <img src={Logo} alt="Logo" />
         <h2>Metrix</h2>
       </a>
-      {/* <button className="toggle-button" onClick={handleToggleSidebar}>
-        {isSidebarOpen ? "Close" : "Open"}
-      </button> */}
+
+      <div className="menu-icon">
+        <FontAwesomeIcon
+          className="icon-blue"
+          onClick={handleToggleSidebar}
+          icon={faBars}
+        />
+      </div>
+
       <ul className="nav-links">
         {links.map((item, index) => (
           <li key={index}>

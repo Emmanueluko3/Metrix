@@ -30,3 +30,13 @@ nav .drop {
 .navicon p {
   color: #8b8d97;
 }
+@media (600px <= width <= 900px) {
+}
+
+@media (width <= 600px) {
+  nav {
+    background: #fff;
+    padding: 12px 18px;
+    width: 100%;
+  }
+}

@@ -139,15 +139,44 @@ a {
   margin-right: 12px;
 }
 
-/* Media queries for tablet and desktop */
-@media (mix-width: 768px) {
+@media (600px <= width <= 900px) {
   .sidebar {
+    background: #77f155;
     width: 100%;
-    /* position: fixed;
-  height: 100vh; */
     top: 0;
     left: -100%;
-    transition: left 0.3s ease-in;
+    transition: left 0.5s ease-in;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (width <= 600px) {
+  .sidebar {
+    z-index: 20;
+    position: absolute;
+    background: #5570f1;
+    width: 100%;
+    top: 0;
+    left: -110%;
+    transition: left 0.5s ease-in;
+  }
+
+  .toggle-button {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .sidebar.open {

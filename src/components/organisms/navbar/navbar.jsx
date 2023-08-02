@@ -29,7 +29,7 @@ function Navbar() {
           <img src={Profile} className="h-6 w-6 profilepic" alt="icon" />
         </div>
       </div>
-      <div className="navicon flex">
+      <div className="navicon flex items-center">
         <img src={Home} className="h-4 w-4" alt="" />{" "}
         <p>{activeIndex == 4 ? "/ Conversations" : null}</p>
       </div>
