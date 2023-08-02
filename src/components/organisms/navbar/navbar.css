@@ -37,6 +37,6 @@ nav .drop {
   nav {
     background: #fff;
     padding: 12px 18px;
-    width: 100%;
+    width: auto;
   }
 }

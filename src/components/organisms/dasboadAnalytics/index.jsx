@@ -11,8 +11,8 @@ import Orders from "../../molecules/Oders/Orders";
 
 function DashboardAnalysis() {
   return (
-    <div className="flex justify-between">
-      <div className="flex flex-wrap justify-between dash-layout">
+    <div className="flex sm-flex-col sm-justify-center sm-items-center justify-between">
+      <div className="flex flex-wrap sm-order-2 justify-between dash-layout">
         <div className="sectionOne">
           <Card
             logo={Graph}
@@ -63,7 +63,8 @@ function DashboardAnalysis() {
               titleColor="#fff"
               descColor="#fff"
               percentageColor="#fff"
-            />
+            />{" "}
+            <div className="mb-20"></div>
             <Card
               logo={User}
               logoBg="rgba(255, 204, 145, 0.16)"
@@ -83,8 +84,8 @@ function DashboardAnalysis() {
 
         <BarChartComponent />
       </div>
-      <div className="orders-view">
-        <div className="viewTop">
+      <div className="orders-view sm-order-1 mb-10">
+        <div className="viewTop w-full">
           <Card
             logo={Bag}
             logoBg="rgba(85, 112, 241, 0.12)"

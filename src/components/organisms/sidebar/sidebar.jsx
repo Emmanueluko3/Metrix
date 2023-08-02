@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./sidebar.css";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../../assets/images/Logo.png";
 import CategoryActive from "../../atoms/icons/CategoryActive.svg";
 import Category from "../../atoms/icons/Category.svg";
@@ -13,12 +13,11 @@ import Settings from "../../atoms/icons/Setting.svg";
 import Headphone from "../../atoms/icons/headphones.svg";
 import Gift from "../../atoms/icons/gift.svg";
 import Logout from "../../atoms/icons/Logout.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+
+import { EventContext } from "../../../context/EventContext";
 
 const Sidebar = () => {
   const location = useLocation();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -26,6 +25,7 @@ const Sidebar = () => {
       (item) => item.href === location.pathname
     );
     setActive(activeIndex);
+    setDisplaySideBar(false);
   }, [location]);
 
   const handleItemClick = (index) => {
@@ -37,9 +37,21 @@ const Sidebar = () => {
     localStorage.setItem("activeIndex", index.toString());
   };
 
-  const handleToggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  const { setOpenSideBar } = useContext(EventContext);
+
+  const [displaySideBar, setDisplaySideBar] = useState(false);
+
+  useEffect(() => {
+    const handleNotification = () => {
+      setDisplaySideBar((prevState) => !prevState);
+    };
+
+    setOpenSideBar(() => handleNotification);
+
+    return () => {
+      setOpenSideBar(null);
+    };
+  }, [setOpenSideBar]);
 
   const links = [
     {
@@ -88,28 +100,20 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+    <div className={`sidebar ${displaySideBar ? "open" : ""}`}>
       <a href="/" className="brand">
         <img src={Logo} alt="Logo" />
         <h2>Metrix</h2>
       </a>
 
-      <div className="menu-icon">
-        <FontAwesomeIcon
-          className="icon-blue"
-          onClick={handleToggleSidebar}
-          icon={faBars}
-        />
-      </div>
-
       <ul className="nav-links">
         {links.map((item, index) => (
           <li key={index}>
-            <a
+            <Link
               onClick={() => {
                 handleItemClick(index);
               }}
-              href={item.href}
+              to={item.href}
               className={active === index ? "active" : null}
             >
               <img
@@ -123,7 +127,7 @@ const Sidebar = () => {
                 alt="icon"
               />
               {item.label} {item.pushNote ? <span>{item.pushNote}</span> : null}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

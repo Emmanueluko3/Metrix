@@ -1,12 +1,13 @@
 import UserList from "../../molecules/UserList";
 import Button from "../../atoms/Buttton/button";
+import "./index.css";
 
 function Conversations() {
   return (
-    <div className="convo w-full flex flex-col">
+    <div className="convo w-full flex flex-col sm-justify-center">
       <div
         style={{ marginBottom: "20px" }}
-        className="flex justify-between items-center"
+        className="flex w-full justify-between items-center"
       >
         <h3
           style={{
